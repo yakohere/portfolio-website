@@ -4,8 +4,55 @@ $primary: #d5c455;
 $black: #222222;
 $shadow: "0 24px 36px -11px rgb(0 0 0 / 9%)";
 
-@mixin flexCenter {
+@mixin flexCenter($direction) {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: $direction;
+}
+
+.landing-page {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .left {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 100px;
+
+        .position {
+            font-family: Bold;
+            color: $primary;
+        }        
+
+        .name {
+            font-family: Bold;
+            font-size: 80px;
+            line-height: 1.2;
+            color: $black;
+        }
+
+        .buttons {
+            button {
+                padding: 16px 24px;
+                background: $primary;
+                color: #fff;
+                font-family: Medium;
+                border: none;
+                box-shadow: 0 24px 36px -11px rgba(0, 0, 0, 0.2);
+            
+                &:last-child {
+                    background: #fff;
+                    color: $black
+                }
+            }
+        }
+    }
+
+    .right {
+        background: $primary;
+    }
 }

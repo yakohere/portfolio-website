@@ -19,4 +19,58 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+.landing-page {
+  width: 100%;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.landing-page .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 100px;
+}
+
+.landing-page .left .position {
+  font-family: Bold;
+  color: #d5c455;
+}
+
+.landing-page .left .name {
+  font-family: Bold;
+  font-size: 80px;
+  line-height: 1.2;
+  color: #222222;
+}
+
+.landing-page .left .buttons button {
+  padding: 16px 24px;
+  background: #d5c455;
+  color: #fff;
+  font-family: Medium;
+  border: none;
+  -webkit-box-shadow: 0 24px 36px -11px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 24px 36px -11px rgba(0, 0, 0, 0.2);
+}
+
+.landing-page .left .buttons button:last-child {
+  background: #fff;
+  color: #222222;
+}
+
+.landing-page .right {
+  background: #d5c455;
+}
 /*# sourceMappingURL=main.css.map */
