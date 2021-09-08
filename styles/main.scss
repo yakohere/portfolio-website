@@ -17,6 +17,31 @@ $shadow: "0 24px 36px -11px rgb(0 0 0 / 9%)";
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
+    .header {
+        width: 100%;
+        position: absolute;
+        padding: 20px 100px;
+        display: flex;
+        justify-content: space-between;
+
+        .logo {
+            font-family: Bold;
+            color: $black;
+        }
+
+        .burger-icon {
+            @include flexCenter(column);
+            gap: 3px;
+            cursor: pointer;
+
+            span {
+                width: 20px;
+                height: 1.3px;
+                background: $black;
+            }
+        }
+    }
+
     .left {
         display: flex;
         justify-content: center;
@@ -33,6 +58,7 @@ $shadow: "0 24px 36px -11px rgb(0 0 0 / 9%)";
             font-size: 80px;
             line-height: 1.2;
             color: $black;
+            margin-bottom: 24px;
         }
 
         .buttons {
@@ -43,6 +69,7 @@ $shadow: "0 24px 36px -11px rgb(0 0 0 / 9%)";
                 font-family: Medium;
                 border: none;
                 box-shadow: 0 24px 36px -11px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
             
                 &:last-child {
                     background: #fff;
