@@ -1,0 +1,11 @@
+@import "fonts";
+
+$primary: #d5c455;
+$black: #222222;
+$shadow: "0 24px 36px -11px rgb(0 0 0 / 9%)";
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
