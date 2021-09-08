@@ -32,13 +32,13 @@
 .landing-page .header {
   width: 100%;
   position: absolute;
-  padding: 20px 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 20px 100px;
 }
 
 .landing-page .header .logo {
@@ -70,6 +70,25 @@
   background: #222222;
 }
 
+@media (max-width: 1230px) {
+  .landing-page .header {
+    padding: 20px 70px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .landing-page .header {
+    padding: 20px 50px;
+  }
+}
+
+@media (max-width: 730px) {
+  .landing-page {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
 .landing-page .left {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -84,6 +103,16 @@
   padding-left: 100px;
 }
 
+@media (max-width: 730px) {
+  .landing-page .left {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+  }
+}
+
 .landing-page .left .position {
   font-family: Bold;
   color: #d5c455;
@@ -95,6 +124,18 @@
   line-height: 1.2;
   color: #222222;
   margin-bottom: 24px;
+}
+
+@media (max-width: 1000px) {
+  .landing-page .left .name {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 730px) {
+  .landing-page .left .name {
+    color: #fff;
+  }
 }
 
 .landing-page .left .buttons button {
@@ -113,7 +154,25 @@
   color: #222222;
 }
 
+@media (max-width: 1230px) {
+  .landing-page .left {
+    padding-left: 70px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .landing-page .left {
+    padding-left: 50px;
+  }
+}
+
 .landing-page .right {
   background: #d5c455;
+}
+
+.landing-page .right img {
+  height: 100%;
+  display: block;
+  margin: auto;
 }
 /*# sourceMappingURL=main.css.map */

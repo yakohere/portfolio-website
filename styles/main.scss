@@ -20,9 +20,9 @@ $shadow: "0 24px 36px -11px rgb(0 0 0 / 9%)";
     .header {
         width: 100%;
         position: absolute;
-        padding: 20px 100px;
         display: flex;
         justify-content: space-between;
+        padding: 20px 100px;
 
         .logo {
             font-family: Bold;
@@ -40,6 +40,19 @@ $shadow: "0 24px 36px -11px rgb(0 0 0 / 9%)";
                 background: $black;
             }
         }
+
+        @media(max-width: 1230px) {
+            padding: 20px 70px;  
+        }
+
+        @media(max-width: 1080px) {
+            padding: 20px 50px;    
+        }
+
+    }
+
+    @media(max-width: 730px) {
+        grid-template-columns: 1fr;            
     }
 
     .left {
@@ -47,6 +60,14 @@ $shadow: "0 24px 36px -11px rgb(0 0 0 / 9%)";
         justify-content: center;
         flex-direction: column;
         padding-left: 100px;
+
+        @media(max-width: 730px) {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;            
+        }
 
         .position {
             font-family: Bold;
@@ -59,6 +80,14 @@ $shadow: "0 24px 36px -11px rgb(0 0 0 / 9%)";
             line-height: 1.2;
             color: $black;
             margin-bottom: 24px;
+
+            @media(max-width: 1000px) {
+                font-size: 50px;            
+            }
+
+            @media(max-width: 730px) {
+                color: #fff;            
+            }
         }
 
         .buttons {
@@ -77,9 +106,23 @@ $shadow: "0 24px 36px -11px rgb(0 0 0 / 9%)";
                 }
             }
         }
+
+        @media(max-width: 1230px) {
+            padding-left: 70px;    
+        }
+
+        @media(max-width: 1080px) {
+            padding-left: 50px;    
+        }
     }
 
     .right {
         background: $primary;
+
+        img {
+            height: 100%;
+            display: block;
+            margin: auto;
+        }
     }
 }
