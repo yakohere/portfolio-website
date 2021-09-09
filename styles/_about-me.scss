@@ -1,7 +1,15 @@
 .about-me {
     width: 100%;
-    height: 100vh;
-    padding: $section_padding;
+    min-height: 100vh;
+    padding: $section_padding_laptop;
+
+    @media(max-width: 800px) {
+        padding: $section_padding_tablet;
+    }
+
+    @media(max-width: 500px) {
+        padding: $section_padding_phone;
+    }
 
     .title {
         font-family: Bold;
@@ -12,15 +20,33 @@
 
     .content-wrapper {
         width: 100%;
+        height: 80%;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 30px;
+        align-items: center;
 
+        @media(max-width: 1150px) {
+            grid-template-columns: 1fr;
+
+        }
         
         .left {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 30px;
+            
+            @media(max-width: 1150px) {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+
+            @media(max-width: 1000px) {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @media(max-width: 500px) {
+                gap: 10px;
+            }
 
             .box {
                 width: 100%;
@@ -31,16 +57,80 @@
                 justify-content: center;
                 flex-direction: column;
                 box-shadow: $shadow;
+                padding: 20px;
+                text-align: center;
             
                 .amount {
                     font-family: Bold;
                     color: $primary;
                     font-size: 50px;
+
+                    @media(max-width: 500px) {
+                        font-size: 30px;
+                    }
                 }
 
                 .name {
                     font-family: Regular;
                     color: $black;
+                }
+            }
+        }
+
+        .right {
+            .small-text {
+                font-family: Bold;
+                font-size: 14px;
+                color: $primary;
+            }
+
+            .position {
+                font-family: Medium;
+                font-size: 30px;
+                line-height: 1.2;
+                margin: 15px 0;
+                color: $black;
+
+                @media(max-width: 800px) {
+                    font-size: 20px;
+                }
+            }
+
+            .summary {
+                font-family: Regular;
+                color: #999999;
+            }
+
+            .personal-information-wrapper {
+                margin-top: 20px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+
+                @media(max-width: 800px) {
+                    grid-template-columns: 1fr;
+                }
+
+                .single-info {
+                    font-family: Medium;
+                    display: flex;
+
+                    span:first-child {
+                        width: 110px;
+                        color: $black;
+                        
+                        @media(max-width: 800px) {
+                            width: 150px;
+                        }
+
+                        @media(max-width: 430px) {
+                            width: 110px;
+                        }
+                    }
+
+                    span:last-child {
+                        color: $primary;
+                    }
                 }
             }
         }

@@ -1,7 +1,10 @@
 $primary: #d5c455;
 $black: #222222;
-$section_padding: 40px 80px;
-$shadow: 8px 25px 28px 9px rgba(0, 0, 0, 0.09);
+$shadow: 8px 25px 28px -9px rgba(0, 0, 0, 0.09);
+
+$section_padding_laptop: 40px 80px;
+$section_padding_tablet: 20px 40px;
+$section_padding_phone: 10px 20px;
 
 @mixin flexCenter($direction) {
     display: flex;

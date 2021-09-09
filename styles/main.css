@@ -27,6 +27,7 @@
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
+  overflow: hidden;
 }
 
 .landing-page .header {
@@ -144,8 +145,8 @@
   color: #fff;
   font-family: Medium;
   border: none;
-  -webkit-box-shadow: 8px 25px 28px 9px rgba(0, 0, 0, 0.09);
-          box-shadow: 8px 25px 28px 9px rgba(0, 0, 0, 0.09);
+  -webkit-box-shadow: 8px 25px 28px -9px rgba(0, 0, 0, 0.09);
+          box-shadow: 8px 25px 28px -9px rgba(0, 0, 0, 0.09);
   cursor: pointer;
 }
 
@@ -185,8 +186,20 @@
 
 .about-me {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   padding: 40px 80px;
+}
+
+@media (max-width: 800px) {
+  .about-me {
+    padding: 20px 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-me {
+    padding: 10px 20px;
+  }
 }
 
 .about-me .title {
@@ -198,11 +211,22 @@
 
 .about-me .content-wrapper {
   width: 100%;
+  height: 80%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1150px) {
+  .about-me .content-wrapper {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 .about-me .content-wrapper .left {
@@ -211,6 +235,26 @@
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   gap: 30px;
+}
+
+@media (max-width: 1150px) {
+  .about-me .content-wrapper .left {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 1000px) {
+  .about-me .content-wrapper .left {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-me .content-wrapper .left {
+    gap: 10px;
+  }
 }
 
 .about-me .content-wrapper .left .box {
@@ -230,8 +274,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-shadow: 8px 25px 28px 9px rgba(0, 0, 0, 0.09);
-          box-shadow: 8px 25px 28px 9px rgba(0, 0, 0, 0.09);
+  -webkit-box-shadow: 8px 25px 28px -9px rgba(0, 0, 0, 0.09);
+          box-shadow: 8px 25px 28px -9px rgba(0, 0, 0, 0.09);
+  padding: 20px;
+  text-align: center;
 }
 
 .about-me .content-wrapper .left .box .amount {
@@ -240,8 +286,83 @@
   font-size: 50px;
 }
 
+@media (max-width: 500px) {
+  .about-me .content-wrapper .left .box .amount {
+    font-size: 30px;
+  }
+}
+
 .about-me .content-wrapper .left .box .name {
   font-family: Regular;
   color: #222222;
+}
+
+.about-me .content-wrapper .right .small-text {
+  font-family: Bold;
+  font-size: 14px;
+  color: #d5c455;
+}
+
+.about-me .content-wrapper .right .position {
+  font-family: Medium;
+  font-size: 30px;
+  line-height: 1.2;
+  margin: 15px 0;
+  color: #222222;
+}
+
+@media (max-width: 800px) {
+  .about-me .content-wrapper .right .position {
+    font-size: 20px;
+  }
+}
+
+.about-me .content-wrapper .right .summary {
+  font-family: Regular;
+  color: #999999;
+}
+
+.about-me .content-wrapper .right .personal-information-wrapper {
+  margin-top: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+@media (max-width: 800px) {
+  .about-me .content-wrapper .right .personal-information-wrapper {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.about-me .content-wrapper .right .personal-information-wrapper .single-info {
+  font-family: Medium;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about-me .content-wrapper .right .personal-information-wrapper .single-info span:first-child {
+  width: 110px;
+  color: #222222;
+}
+
+@media (max-width: 800px) {
+  .about-me .content-wrapper .right .personal-information-wrapper .single-info span:first-child {
+    width: 150px;
+  }
+}
+
+@media (max-width: 430px) {
+  .about-me .content-wrapper .right .personal-information-wrapper .single-info span:first-child {
+    width: 110px;
+  }
+}
+
+.about-me .content-wrapper .right .personal-information-wrapper .single-info span:last-child {
+  color: #d5c455;
 }
 /*# sourceMappingURL=main.css.map */
