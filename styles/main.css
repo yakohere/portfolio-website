@@ -211,7 +211,6 @@
 
 .about-me .content-wrapper {
   width: 100%;
-  height: 80%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -297,6 +296,10 @@
   color: #222222;
 }
 
+.about-me .content-wrapper .right {
+  height: 100%;
+}
+
 .about-me .content-wrapper .right .small-text {
   font-family: Bold;
   font-size: 14px;
@@ -364,5 +367,25 @@
 
 .about-me .content-wrapper .right .personal-information-wrapper .single-info span:last-child {
   color: #d5c455;
+}
+
+.about-me .content-wrapper .right .cv-download {
+  width: 160px;
+  margin-top: 20px;
+  display: block;
+  padding: 16px 24px;
+  color: #fff;
+  background: #d5c455;
+  font-family: Medium;
+  text-decoration: none;
+}
+
+@media (max-width: 500px) {
+  .about-me .content-wrapper .right .cv-download {
+    width: 140px;
+    margin: auto;
+    padding: 8px 12px;
+    margin-top: 30px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
