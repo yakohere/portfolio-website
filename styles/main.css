@@ -144,8 +144,8 @@
   color: #fff;
   font-family: Medium;
   border: none;
-  -webkit-box-shadow: 0 24px 36px -11px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 24px 36px -11px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 8px 25px 28px 9px rgba(0, 0, 0, 0.09);
+          box-shadow: 8px 25px 28px 9px rgba(0, 0, 0, 0.09);
   cursor: pointer;
 }
 
@@ -181,5 +181,67 @@
     width: 100%;
     height: auto;
   }
+}
+
+.about-me {
+  width: 100%;
+  height: 100vh;
+  padding: 40px 80px;
+}
+
+.about-me .title {
+  font-family: Bold;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-me .content-wrapper {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.about-me .content-wrapper .left {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.about-me .content-wrapper .left .box {
+  width: 100%;
+  height: 150px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 8px 25px 28px 9px rgba(0, 0, 0, 0.09);
+          box-shadow: 8px 25px 28px 9px rgba(0, 0, 0, 0.09);
+}
+
+.about-me .content-wrapper .left .box .amount {
+  font-family: Bold;
+  color: #d5c455;
+  font-size: 50px;
+}
+
+.about-me .content-wrapper .left .box .name {
+  font-family: Regular;
+  color: #222222;
 }
 /*# sourceMappingURL=main.css.map */

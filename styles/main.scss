@@ -1,8 +1,7 @@
-@import "fonts";
-
 $primary: #d5c455;
 $black: #222222;
-$shadow: "0 24px 36px -11px rgb(0 0 0 / 9%)";
+$section_padding: 40px 80px;
+$shadow: 8px 25px 28px 9px rgba(0, 0, 0, 0.09);
 
 @mixin flexCenter($direction) {
     display: flex;
@@ -11,123 +10,6 @@ $shadow: "0 24px 36px -11px rgb(0 0 0 / 9%)";
     flex-direction: $direction;
 }
 
-.landing-page {
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    .header {
-        width: 100%;
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
-        padding: 20px 100px;
-
-        .logo {
-            font-family: Bold;
-            color: $black;
-        }
-
-        .burger-icon {
-            @include flexCenter(column);
-            gap: 3px;
-            cursor: pointer;
-
-            span {
-                width: 20px;
-                height: 1.3px;
-                background: $black;
-            }
-        }
-
-        @media(max-width: 1230px) {
-            padding: 20px 70px;  
-        }
-
-        @media(max-width: 1080px) {
-            padding: 20px 50px;    
-        }
-
-    }
-
-    @media(max-width: 730px) {
-        grid-template-columns: 1fr;            
-    }
-
-    .left {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        padding-left: 100px;
-
-        @media(max-width: 730px) {
-            width: 100%;
-            position: absolute;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px;            
-        }
-
-        .position {
-            font-family: Bold;
-            color: $primary;
-        }        
-
-        .name {
-            font-family: Bold;
-            font-size: 80px;
-            line-height: 1.2;
-            color: $black;
-            margin-bottom: 24px;
-
-            @media(max-width: 1000px) {
-                font-size: 50px;            
-            }
-
-            @media(max-width: 730px) {
-                color: #fff;            
-            }
-        }
-
-        .buttons {
-            button {
-                padding: 16px 24px;
-                background: $primary;
-                color: #fff;
-                font-family: Medium;
-                border: none;
-                box-shadow: 0 24px 36px -11px rgba(0, 0, 0, 0.2);
-                cursor: pointer;
-            
-                &:last-child {
-                    background: #fff;
-                    color: $black
-                }
-            }
-        }
-
-        @media(max-width: 1230px) {
-            padding-left: 70px;    
-        }
-
-        @media(max-width: 1080px) {
-            padding-left: 50px;    
-        }
-    }
-
-    .right {
-        background: $primary;
-
-        img {
-            height: 100%;
-            display: block;
-            margin: auto;
-        
-            @media(max-width: 530px) {
-                width: 100%;
-                height: auto;
-            }
-        }
-    }
-}
+@import "fonts";
+@import "landing-page";
+@import "about-me"
