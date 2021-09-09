@@ -25,8 +25,8 @@
   height: 100vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
 }
 
 .landing-page .header {
@@ -174,5 +174,12 @@
   height: 100%;
   display: block;
   margin: auto;
+}
+
+@media (max-width: 530px) {
+  .landing-page .right img {
+    width: 100%;
+    height: auto;
+  }
 }
 /*# sourceMappingURL=main.css.map */
