@@ -21,12 +21,48 @@
             @include flexCenter(column);
             gap: 3px;
             cursor: pointer;
+            position: relative;
 
             span {
                 width: 20px;
                 height: 1.3px;
                 background: $black;
+                transition: 0.1s;
             }
+        }
+
+        .menu {
+            position: absolute;
+            right: 100px;
+            top: 50px;
+            background: white; 
+            transition: 0.3s ease-in;
+            display: none;
+            padding: 40px 100px;
+            
+            ul li {
+                list-style: none;
+            }
+        }
+
+        .show-menu {
+            display: block;        
+        }
+
+        .burger-open {
+               span:nth-child(2) {
+                    opacity: 0;
+                }
+
+                span:first-child {
+                    position: absolute;
+                    transform: rotate(45deg);
+                }
+
+                span:last-child {
+                    position: absolute;
+                    transform: rotate(-45deg);
+                }
         }
 
         @media(max-width: 1230px) {
@@ -79,20 +115,27 @@
         }
 
         .buttons {
-            button {
-                padding: 16px 24px;
-                background: $primary;
-                color: #fff;
-                font-family: Medium;
-                border: none;
-                box-shadow: $shadow;
-                cursor: pointer;
+            a {    
+                text-decoration: none;
+
+                button {
+                    background: $primary;
+                    padding: 16px 24px;
+                    color: #fff;
+                    font-family: Medium;
+                    border: none;
+                    box-shadow: $shadow;
+                    cursor: pointer;
+                }
             
                 &:last-child {
-                    background: #fff;
-                    color: $black
+                    button {
+                        background: #fff;
+                        color: $black
+                    }
                 }
             }
+
         }
 
         @media(max-width: 1230px) {

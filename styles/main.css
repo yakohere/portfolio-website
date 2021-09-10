@@ -77,12 +77,50 @@
           flex-direction: column;
   gap: 3px;
   cursor: pointer;
+  position: relative;
 }
 
 .landing-page .header .burger-icon span {
   width: 20px;
   height: 1.3px;
   background: #222222;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.landing-page .header .menu {
+  position: absolute;
+  right: 100px;
+  top: 50px;
+  background: white;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+  display: none;
+  padding: 40px 100px;
+}
+
+.landing-page .header .menu ul li {
+  list-style: none;
+}
+
+.landing-page .header .show-menu {
+  display: block;
+}
+
+.landing-page .header .burger-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.landing-page .header .burger-open span:first-child {
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.landing-page .header .burger-open span:last-child {
+  position: absolute;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 @media (max-width: 1230px) {
@@ -153,9 +191,13 @@
   }
 }
 
-.landing-page .left .buttons button {
-  padding: 16px 24px;
+.landing-page .left .buttons a {
+  text-decoration: none;
+}
+
+.landing-page .left .buttons a button {
   background: #d5c455;
+  padding: 16px 24px;
   color: #fff;
   font-family: Medium;
   border: none;
@@ -164,7 +206,7 @@
   cursor: pointer;
 }
 
-.landing-page .left .buttons button:last-child {
+.landing-page .left .buttons a:last-child button {
   background: #fff;
   color: #222222;
 }

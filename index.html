@@ -9,6 +9,7 @@
     <script defer src="scripts/about-me.js"></script>
     <script defer src="scripts/slowNumber.js"></script>
     <script defer src="scripts/skills.js"></script>
+    <script defer src="scripts/landing.js"></script>
     <title>Yakhyo Ismoilov</title>
 </head>
 
@@ -17,10 +18,20 @@
     <div class="landing-page">
         <div class="header">
             <div class="logo">yahyo.</div>
-            <div class="burger-icon">
+            
+            <div class="burger-icon" id="burger-icon" onclick="showMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
+            </div>
+
+            <div class="menu" id="menu">
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
             </div>
         </div>
         <div class="left">
@@ -31,8 +42,12 @@
                 I'm Yahyo Ismoilov
             </div>
             <div class="buttons">
-                <button>MORE ABOUT ME</button>
-                <button>HIRE ME</button>
+                <a href="#about-me">
+                    <button>MORE ABOUT ME</button>
+                </a>
+                <a href="mailto:yakohere@gmail.com">
+                    <button>HIRE ME</button>
+                </a>
             </div>
         </div>
         <div class="right">
@@ -42,7 +57,7 @@
     <!-- Landing Page End -->
 
     <!-- About Me Start -->
-    <div class="about-me">
+    <div class="about-me" id="about-me">
         <div class="section-title">About Me</div>
 
         <div class="content-wrapper">
