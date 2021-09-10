@@ -1,0 +1,14 @@
+.contact {
+    @include sectionWrapper;
+
+    .social-icons {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        img {
+            width: 50px;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.skills {
+    @include sectionWrapper;
+
+    .skills-wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns:  1fr 1fr 1fr;
+        gap: 30px;        
+
+        @media(max-width: 820px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media(max-width: 550px) {
+            grid-template-columns: 1fr;
+        }
+        
+        .skill {
+            width: 100%;
+            position: relative;
+            
+            label {
+                display: block;
+                font-family: Regular;
+                color: $black;
+                font-size: 16px;
+            }
+
+            .percentage {
+                position: absolute;
+                color: $primary;
+                font-family: Medium;
+                text-align: right;
+                top: 0;
+            }
+
+            progress {
+                width: 100%;
+                appearance: none;
+                background-color: rgba(0,0,0,.05);
+                height: 7px;
+
+                &::-webkit-progress-bar {
+                    background-color: rgba(0,0,0,.05);
+                }
+
+                &::-webkit-progress-value {
+                    background: $primary;
+                }
+            }
+        }
+    }
+}

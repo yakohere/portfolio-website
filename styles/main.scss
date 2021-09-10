@@ -13,6 +13,37 @@ $section_padding_phone: 10px 20px;
     flex-direction: $direction;
 }
 
+@mixin sectionWrapper {
+    width: 100%;
+    min-height: 100vh;
+    padding: $section_padding_laptop;
+        
+    @include flexCenter(column);
+
+    @media(max-width: 800px) {
+        padding: $section_padding_tablet;
+    }
+    
+    @media(max-width: 500px) {
+        padding: $section_padding_phone;
+    }
+}
+
+.section-title {
+    font-family: Bold;
+    font-size: 40px;
+    text-align: center;
+    margin: 40px;
+    
+    @media(max-width: 600px) {
+        margin: 30px;
+        font-size: 30px;
+    }
+}
+
 @import "fonts";
 @import "landing-page";
-@import "about-me"
+@import "about-me";
+@import "skills";
+@import "projects";
+@import "contact"

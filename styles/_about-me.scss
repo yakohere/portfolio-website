@@ -1,24 +1,6 @@
 .about-me {
-    width: 100%;
-    min-height: 100vh;
-    padding: $section_padding_laptop;
-    @include flexCenter(column);
-
-    @media(max-width: 800px) {
-        padding: $section_padding_tablet;
-    }
-
-    @media(max-width: 500px) {
-        padding: $section_padding_phone;
-    }
-
-    .title {
-        font-family: Bold;
-        font-size: 40px;
-        text-align: center;
-        margin-bottom: 80px;       
-    }
-
+    @include sectionWrapper();
+    
     .content-wrapper {
         width: 100%;
         display: grid;
