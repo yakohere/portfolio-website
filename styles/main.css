@@ -2,6 +2,15 @@ html {
   scroll-behavior: smooth;
 }
 
+html ::-webkit-scrollbar {
+  width: 5px;
+  background: white;
+}
+
+html ::-webkit-scrollbar-thumb {
+  background: #d5c455;
+}
+
 .section-title {
   font-family: Bold;
   font-size: 40px;

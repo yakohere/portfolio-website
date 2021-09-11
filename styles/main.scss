@@ -31,6 +31,15 @@ $section_padding_phone: 10px 20px;
 
 html {
     scroll-behavior: smooth;
+
+    ::-webkit-scrollbar {
+        width: 5px;
+        background: white;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: $primary;
+    }
 }
 
 .section-title {
