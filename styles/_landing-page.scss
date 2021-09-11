@@ -7,10 +7,12 @@
 
     .header {
         width: 100%;
-        position: absolute;
+        position: fixed;
         display: flex;
         justify-content: space-between;
         padding: 20px 100px;
+        z-index: 9999999999999999999999999999999999;
+        transition: 0.5s ease-in-out;
 
         .logo {
             font-family: Bold;
@@ -32,21 +34,43 @@
         }
 
         .menu {
+            width: 200px;
+            max-height: 0;
             position: absolute;
             right: 100px;
-            top: 50px;
+            top: 70px;
             background: white; 
-            transition: 0.3s ease-in;
-            display: none;
-            padding: 40px 100px;
-            
-            ul li {
-                list-style: none;
+            transition: 0.5s ease-in-out;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: $shadow;
+
+            ul {
+                a {
+                    text-decoration: none;
+
+                    li {
+                        list-style: none;
+                        margin-bottom: 10px;
+                        font-family: Regular;
+                        color: $black;
+                    }
+                
+                    
+                    &:last-child {
+                        li { 
+                            margin: 0; 
+                        }
+                    }
+                }
             }
         }
 
         .show-menu {
-            display: block;        
+            max-height: 300px;
+            padding: 20px 0;
         }
 
         .burger-open {

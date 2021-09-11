@@ -15,10 +15,10 @@
 
 <body>
     <!-- Landing Page Start -->
-    <div class="landing-page">
-        <div class="header">
+    <div class="landing-page" id="home">
+        <div class="header" id="header">
             <div class="logo">yahyo.</div>
-            
+
             <div class="burger-icon" id="burger-icon" onclick="showMenu()">
                 <span></span>
                 <span></span>
@@ -27,13 +27,25 @@
 
             <div class="menu" id="menu">
                 <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
+                    <a href="#home" onclick="showMenu()">
+                        <li>Home</li>
+                    </a>
+                    <a href="#about-me" onclick="showMenu()">
+                        <li>About Me</li>
+                    </a>
+                    <a href="#skills" onclick="showMenu()">
+                        <li>Skills</li>
+                    </a>
+                    <a href="#portfolio" onclick="showMenu()">
+                        <li>Portfolio</li>
+                    </a>
+                    <a href="#contact" onclick="showMenu()">
+                        <li>Contact</li>
+                    </a>
                 </ul>
             </div>
         </div>
+
         <div class="left">
             <div class="position">
                 Frontend Developer
@@ -79,14 +91,14 @@
     <!-- About Me End -->
 
     <!-- Skills Start -->
-    <div class="skills">
+    <div class="skills" id="skills">
         <div class="section-title">Skills</div>
         <div class="skills-wrapper" id="skills-wrapper"></div>
     </div>
     <!-- Skills End -->
 
     <!-- Portfolio Start -->
-    <div class="projects">
+    <div class="projects" id="portfolio">
         <div class="section-title">Portfolio</div>
         <div class="projects-wrapper">
             <div class="project">
@@ -138,7 +150,7 @@
     <!-- Portfolio End -->
 
     <!-- Contact Start -->
-    <div class="contact">
+    <div class="contact" id="contact">
         <div class="section-title">Follow Me Around</div>
         <div class="social-icons">
             <a href="#"><img src="./images/facebook.png" /></a>

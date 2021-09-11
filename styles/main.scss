@@ -29,6 +29,10 @@ $section_padding_phone: 10px 20px;
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .section-title {
     font-family: Bold;
     font-size: 40px;
